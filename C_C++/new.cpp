@@ -1,25 +1,26 @@
 #include <iostream>
 
-static int rat_things_power = 200;
+struct RatThing {
+    static int ratThingPower;
+    static void power_up_rat_thing(int nuclearIsotopes){
+        ratThingPower = ratThingPower + nuclearIsotopes;
+        const auto wasteHeat = ratThingPower * 20;
 
-void power_up_rat_things(int nuclear_isotopes){
-    rat_things_power = rat_things_power + nuclear_isotopes;
-    const auto waste_heat = rat_things_power * 20;
-
-    if(waste_heat > 10000){
-        std::cout << "Warning! Hot doggie!" << std::endl;
+        if(wasteHeat > 10000){
+            std::cout << "Warning ! Hot doggie\n";
+        }
+        std::cout << "Rat-thinf power: " << ratThingPower << std::endl;
     }
-}
+};
+
+int RatThing::ratThingPower = 200;
 
 int main(void)
 {
     using namespace std;
 
-    cout << "Rat-thing power - " << rat_things_power << endl;
-    power_up_rat_things(100);
-    cout << "Rat-thing power - " << rat_things_power << endl;
-    power_up_rat_things(500);
-    cout << "Rat-thing power - " << rat_things_power << endl;
+    RatThing::power_up_rat_thing(100);
+    RatThing::power_up_rat_thing(500);
     
     return 0;
 }

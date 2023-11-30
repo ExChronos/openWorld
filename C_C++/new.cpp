@@ -9,7 +9,7 @@ struct RatThing {
         if(wasteHeat > 10000){
             std::cout << "Warning ! Hot doggie\n";
         }
-        std::cout << "Rat-thinf power: " << ratThingPower << std::endl;
+        std::cout << "Rat-thing power: " << ratThingPower << std::endl;
     }
 };
 

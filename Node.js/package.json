@@ -1,0 +1,19 @@
+{
+  "name": "start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "simpleDate" : "./date.js"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "test": "echo 'allright'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "yarn": "^1.22.21"
+  }
+}
